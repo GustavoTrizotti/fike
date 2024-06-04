@@ -1,0 +1,273 @@
+@import url('fonts.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-smooth: always;
+}
+
+body {
+  font-family: 'Futura PT Book', sans-serif;
+}
+
+.landing {
+  display: flex;
+  flex-grow: 1;
+  height: 100vh;
+  background: linear-gradient(180deg, #f25f49, #f53145);
+}
+
+.picture {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.picture header {
+  display: flex;
+  padding: 1.5em 2em;
+  gap: 2.5em;
+}
+
+.picture header ul {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  gap: 2em;
+  list-style: none;
+  align-items: center;
+}
+
+.picture header li {
+  font-family: 'Futura PT Medium';
+  color: #fff;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+.picture header img {
+  width: 4em;
+}
+
+.picture div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture .fair-jordan {
+  width: 70%;
+  transform: rotate(-15deg);
+  z-index: 2;
+  filter: drop-shadow(30px 30px 20px #00000080);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.picture .fair-jordan.toggled {
+  transform: rotate(0deg);
+}
+
+.picture div h2 {
+  position: absolute;
+  width: min-content;
+  left: 0.7em;
+  bottom: 0.5em;
+  font-family: 'Futura PT DemiBold Oblique';
+  z-index: 1;
+  font-size: 16em;
+  line-height: 0.85;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.info header {
+  display: flex;
+  padding: 1.5em 2em;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info .info-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.info header {
+  color: #fff;
+  font-size: 0.75em;
+}
+
+.info header i,
+.info header div i {
+  font-size: 1.8em;
+}
+
+.info header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.info header div span {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.info header h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.info header h3::after {
+  content: '1';
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 4em;
+  top: 1em;
+  background-color: #000;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  padding: 0.8em;
+}
+
+.info-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+  color: #fff;
+  padding: 1em;
+}
+
+.classification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.classification h3 {
+  font-family: 'Futura PT DemiBold Oblique';
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.classification ul {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  list-style: none;
+  gap: 0.5em;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 70%;
+  font-size: 0.85em;
+  color: #fff;
+}
+
+.description h2 {
+  font-size: 2em;
+}
+
+.description a {
+  color: #fff;
+  outline: none;
+}
+
+.description ul {
+  margin-left: 1em;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.buy div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  text-transform: uppercase;
+}
+
+.buy button {
+  display: flex;
+  width: 40%;
+  padding: 1em 2em;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.buy button:hover {
+  opacity: 0.7;
+}
+
+.buy .actions {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.buy .actions h4 {
+  font-family: 'Futura PT DemiBold Oblique';
+  font-size: 1.5em;
+}
+
+.lateral-menu {
+  position: absolute;
+  display: flex;
+  right: 3em;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lateral-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #fff;
+  list-style: none;
+}
+
+.lateral-menu ul li a {
+  color: #fff;
+  display: block;
+  border: 3px solid #fff;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+}
+
+.active {
+  background: #fff;
+}
